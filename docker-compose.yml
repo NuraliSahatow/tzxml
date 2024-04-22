@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: testadmin
+      POSTGRES_USER: testadmin
+      POSTGRES_PASSWORD: testadmin
+    ports:
+      - "5432:5432"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    environment:
+      DATABASE_HOST: db
+      DATABASE_NAME: testadmin
+      DATABASE_USER: testadmin
+      DATABASE_PASSWORD: testadmin
+      DATABASE_PORT: 5432
+
+volumes:
+  postgres_data:

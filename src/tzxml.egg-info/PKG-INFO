@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: tzxml
+Version: 0.1.0
+Summary: Default template for PDM package
+Author-email: Nurali Sahatov <nuralisahatov88@example.com>
+License: MIT
+Requires-Python: <4.0,>=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: psycopg2-binary<3.0,>=2.9
+Requires-Dist: lxml<5.0,>=4.9.1
+
+# tzxml

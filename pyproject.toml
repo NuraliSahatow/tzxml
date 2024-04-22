@@ -1,0 +1,18 @@
+[project]
+name = "tzxml"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Nurali Sahatov", email = "nuralisahatov88@example.com"},
+]
+dependencies = [
+    "psycopg2-binary>=2.9, <3.0",
+    "lxml>=4.9.1, <5.0"
+]
+requires-python = ">=3.12,<4.0"
+readme = "README.md"
+license = {text = "MIT"}
+[pdm.dev-dependencies]
+black = ">=24.4.0, <25.0"
+flake8 = ">=4.0.1, <5.0"
+isort = ">=5.13.2, <6.0"
